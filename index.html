@@ -2,19 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F5F3EC">
   <title>Botanicum — Appenzell, by the glass.</title>
   <meta name="description" content="Botanicum. Appenzell, by the glass. The bar at Huus Quell, Gonten. Open daily, 12 – 24. No reservations.">
-  <meta property="og:title" content="Botanicum">
-  <meta property="og:description" content="Appenzell, by the glass.">
+  <link rel="canonical" href="https://botanicumbar.ch/">
+
+  <meta property="og:title" content="Botanicum — Appenzell, by the glass.">
+  <meta property="og:description" content="The bar at Huus Quell, Gonten. Daily 12 – 24.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://botanicumbar.ch/">
+  <meta property="og:site_name" content="Botanicum">
+  <meta name="twitter:card" content="summary">
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap"></noscript>
+
   <script>
-    // Run before render: if user has already seen the splash, skip animations entirely.
+    // Run before render: if user has already seen the splash this session, skip animations entirely.
     try {
       if (sessionStorage.getItem('seen') === '1') {
         document.documentElement.classList.add('instant');
@@ -34,10 +45,13 @@
     body {
       background: var(--cream);
       color: var(--ink);
-      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-weight: 400;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
       min-height: 100vh;
+      min-height: 100dvh;
       display: flex;
       flex-direction: column;
     }
@@ -57,8 +71,8 @@
       width: 56px;
       height: auto;
       opacity: 0;
-      transform: translateY(12px);
-      animation: rise 1.4s cubic-bezier(0.2, 0, 0, 1) 0.25s forwards;
+      transform: translateY(8px);
+      animation: rise 0.9s cubic-bezier(0.2, 0, 0, 1) 0.1s forwards;
     }
 
     .tagline {
@@ -68,14 +82,14 @@
       color: var(--ink);
       margin: 0;
       opacity: 0;
-      animation: fade 1.2s ease-out 1.6s forwards;
+      animation: fade 0.7s ease-out 0.7s forwards;
     }
 
     .links {
       display: flex;
       gap: 56px;
       opacity: 0;
-      animation: fade 1.2s ease-out 2.6s forwards;
+      animation: fade 0.7s ease-out 1.05s forwards;
     }
 
     .links a {
@@ -101,7 +115,7 @@
       text-transform: uppercase;
       color: var(--muted);
       opacity: 0;
-      animation: fade 1.2s ease-out 2.6s forwards;
+      animation: fade 0.7s ease-out 1.25s forwards;
     }
     footer p { margin: 0; line-height: 1.9; }
     footer p.signature { margin-top: 1.2em; }
@@ -151,7 +165,7 @@
   </main>
 
   <footer>
-    <p>Daily  12:00 – 24:00</p>
+    <p>Daily 12:00 – 24:00</p>
     <p>No reservations</p>
     <p class="signature">Huus Quell · Gonten, Appenzell</p>
   </footer>
