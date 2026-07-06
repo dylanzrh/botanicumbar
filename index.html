@@ -13,10 +13,33 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://botanicumbar.ch/">
   <meta property="og:site_name" content="Botanicum">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://botanicumbar.ch/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "Botanicum",
+    "url": "https://botanicumbar.ch/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gonten",
+      "postalCode": "9108",
+      "addressRegion": "Appenzell Innerrhoden",
+      "addressCountry": "CH"
+    },
+    "containedInPlace": { "@type": "Hotel", "name": "Huus Quell" },
+    "openingHours": "Mo-Su 12:00-24:00",
+    "acceptsReservations": "False",
+    "hasMenu": "https://botanicumbar.ch/menu.pdf"
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,6 +169,24 @@
       opacity: 1;
       transform: none;
       animation: none;
+    }
+
+    /* Soft crossfade between pages (Chrome, Edge, Safari 18.2+) */
+    @view-transition { navigation: auto; }
+
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation-duration: 0.6s;
+      animation-timing-function: ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      @view-transition { navigation: none; }
+    }
+
+    /* Fallback for browsers without view transitions: gentle fade on return visits */
+    @supports not (view-transition-name: root) {
+      html.instant body { animation: fade 0.4s ease-out; }
     }
   </style>
 </head>
