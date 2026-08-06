@@ -24,6 +24,15 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap"></noscript>
 
+  <script>
+    // If the visitor already saw the splash this session (arrived from the home page),
+    // skip this page's entrance animation and let the cross-page crossfade do the work.
+    try {
+      if (sessionStorage.getItem('seen') === '1') {
+        document.documentElement.classList.add('instant');
+      }
+    } catch (e) {}
+  </script>
   <style>
     :root { --cream: #F5F3EC; --ink: #1A1A1A; --muted: #8A8378; }
     *, *::before, *::after { box-sizing: border-box; }
@@ -67,6 +76,27 @@
 
     @media (prefers-reduced-motion: reduce) {
       header, .prose, footer { opacity: 1; animation: none; }
+    }
+
+    /* Return visits within session: show content immediately, the crossfade carries the motion */
+    html.instant header,
+    html.instant .prose,
+    html.instant footer {
+      opacity: 1;
+      animation: none;
+    }
+
+    /* Soft crossfade between pages (Chrome, Edge, Safari 18.2+) — must match index.html */
+    @view-transition { navigation: auto; }
+
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation-duration: 0.6s;
+      animation-timing-function: ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      @view-transition { navigation: none; }
     }
   </style>
 </head>
