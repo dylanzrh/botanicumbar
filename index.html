@@ -4,28 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#F5F3EC">
-  <title>Botanicum — Appenzell, by the glass.</title>
-  <meta name="description" content="Botanicum. Appenzell, by the glass. The bar at Huus Quell, Gonten. Open daily, 12 – 24. No reservations.">
+  <title>BOTANICUM BAR · Appenzell, by the glass.</title>
+  <meta name="description" content="BOTANICUM BAR. Appenzell, by the glass. The bar at HUUS QUELL, Gonten. Daily 12:00 – 24:00. No reservations.">
   <link rel="canonical" href="https://botanicumbar.ch/">
 
-  <meta property="og:title" content="Botanicum — Appenzell, by the glass.">
-  <meta property="og:description" content="The bar at Huus Quell, Gonten. Daily 12 – 24.">
+  <meta property="og:title" content="BOTANICUM BAR · Appenzell, by the glass.">
+  <meta property="og:description" content="The bar at HUUS QUELL, Gonten. Daily 12:00 – 24:00.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://botanicumbar.ch/">
-  <meta property="og:site_name" content="Botanicum">
+  <meta property="og:site_name" content="BOTANICUM BAR">
   <meta property="og:image" content="https://botanicumbar.ch/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BarOrPub",
-    "name": "Botanicum",
+    "name": "BOTANICUM BAR",
     "url": "https://botanicumbar.ch/",
     "address": {
       "@type": "PostalAddress",
@@ -34,7 +34,7 @@
       "addressRegion": "Appenzell Innerrhoden",
       "addressCountry": "CH"
     },
-    "containedInPlace": { "@type": "Hotel", "name": "Huus Quell" },
+    "containedInPlace": { "@type": "Hotel", "name": "HUUS QUELL" },
     "openingHours": "Mo-Su 12:00-24:00",
     "acceptsReservations": "False",
     "hasMenu": "https://botanicumbar.ch/menu.pdf"
@@ -58,10 +58,12 @@
     } catch (e) {}
   </script>
   <style>
+    /* Farbkonzept HUUS QUELL, Digital. Corporate Hauptfarbe #30280A, Neutralfarbe #F5F3EC.
+       Keine eigenen Grautöne. Abstufung über Transparenz der Hauptfarbe (65 %, Kontrast 4.5:1). */
     :root {
       --cream: #F5F3EC;
-      --ink: #1A1A1A;
-      --muted: #8A8378;
+      --ink: #30280A;
+      --muted: rgba(48, 40, 10, 0.65);
     }
     *, *::before, *::after { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
@@ -90,7 +92,10 @@
       padding: 32px;
     }
 
+    ::selection { background: var(--ink); color: var(--cream); }
+
     .mark {
+      color: var(--ink);
       width: 56px;
       height: auto;
       opacity: 0;
@@ -202,9 +207,9 @@
 </head>
 <body>
   <main class="stage">
-    <svg class="mark" viewBox="0 0 51.14 129.99" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Botanicum">
-      <path fill="#1A1A1A" d="M49.3,41.36c1.11-.73,1.84-1.99,1.84-3.42,0-2.27-1.84-4.1-4.11-4.1-1.03,0-1.97.38-2.69,1.01-8.85,7.2-15.24,17.28-17.75,28.82v-1.87c0-17.79,8.93-33.45,22.71-42.63,1.11-.73,1.84-1.99,1.84-3.42,0-2.27-1.84-4.1-4.11-4.1-1.03,0-1.97.38-2.69,1.01-10.58,8.6-17.66,21.34-18.77,35.74-1.11-14.41-8.19-27.14-18.77-35.74-.72-.63-1.66-1.01-2.69-1.01-2.27,0-4.1,1.84-4.1,4.1,0,1.43.73,2.69,1.84,3.42,13.78,9.18,22.71,24.84,22.71,42.63v1.87c-2.51-11.54-8.9-21.62-17.75-28.82-.72-.63-1.66-1.01-2.69-1.01-2.27,0-4.1,1.84-4.1,4.1,0,1.43.73,2.69,1.84,3.42,13.78,9.18,22.71,24.84,22.71,42.63v1.77c-2.53-11.5-8.91-21.55-17.73-28.72-.72-.63-1.66-1.01-2.69-1.01C1.86,56.03.02,57.87.02,60.14c0,1.43.73,2.69,1.84,3.42,13.61,9.07,22.48,24.47,22.69,41.98v3.95h.02v20.5h2v-20.5h.02v-3.95c.21-17.52,9.08-32.92,22.69-41.98,1.11-.73,1.84-1.99,1.84-3.42,0-2.27-1.84-4.1-4.1-4.1-1.03,0-1.97.38-2.69,1.01-8.83,7.17-15.21,17.23-17.73,28.72v-1.77c0-17.79,8.93-33.45,22.71-42.63Z"/>
-      <path fill="#1A1A1A" d="M21.15,5.68l4.61,23.06h0l4.61-23.06c.2-.97.13-2.03-.44-3.13-.69-1.33-1.99-2.29-3.47-2.5-2.91-.42-5.4,1.83-5.4,4.65,0,.34.04.66.1.98h0Z"/>
+    <svg class="mark" viewBox="0 0 51.14 129.99" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BOTANICUM BAR">
+      <path fill="currentColor" d="M49.3,41.36c1.11-.73,1.84-1.99,1.84-3.42,0-2.27-1.84-4.1-4.11-4.1-1.03,0-1.97.38-2.69,1.01-8.85,7.2-15.24,17.28-17.75,28.82v-1.87c0-17.79,8.93-33.45,22.71-42.63,1.11-.73,1.84-1.99,1.84-3.42,0-2.27-1.84-4.1-4.11-4.1-1.03,0-1.97.38-2.69,1.01-10.58,8.6-17.66,21.34-18.77,35.74-1.11-14.41-8.19-27.14-18.77-35.74-.72-.63-1.66-1.01-2.69-1.01-2.27,0-4.1,1.84-4.1,4.1,0,1.43.73,2.69,1.84,3.42,13.78,9.18,22.71,24.84,22.71,42.63v1.87c-2.51-11.54-8.9-21.62-17.75-28.82-.72-.63-1.66-1.01-2.69-1.01-2.27,0-4.1,1.84-4.1,4.1,0,1.43.73,2.69,1.84,3.42,13.78,9.18,22.71,24.84,22.71,42.63v1.77c-2.53-11.5-8.91-21.55-17.73-28.72-.72-.63-1.66-1.01-2.69-1.01C1.86,56.03.02,57.87.02,60.14c0,1.43.73,2.69,1.84,3.42,13.61,9.07,22.48,24.47,22.69,41.98v3.95h.02v20.5h2v-20.5h.02v-3.95c.21-17.52,9.08-32.92,22.69-41.98,1.11-.73,1.84-1.99,1.84-3.42,0-2.27-1.84-4.1-4.1-4.1-1.03,0-1.97.38-2.69,1.01-8.83,7.17-15.21,17.23-17.73,28.72v-1.77c0-17.79,8.93-33.45,22.71-42.63Z"/>
+      <path fill="currentColor" d="M21.15,5.68l4.61,23.06h0l4.61-23.06c.2-.97.13-2.03-.44-3.13-.69-1.33-1.99-2.29-3.47-2.5-2.91-.42-5.4,1.83-5.4,4.65,0,.34.04.66.1.98h0Z"/>
     </svg>
 
     <p class="tagline">Appenzell, by the glass.</p>
@@ -218,7 +223,7 @@
   <footer>
     <p>Daily 12:00 – 24:00</p>
     <p>No reservations</p>
-    <p class="signature"><a href="https://appenzellerhuus.ch/en/hotels/huus-quell-5star/" target="_blank" rel="noopener">Huus Quell</a> · Gonten, Appenzell</p>
+    <p class="signature"><a href="https://appenzellerhuus.ch/en/hotels/huus-quell-5star/" target="_blank" rel="noopener">HUUS QUELL</a> · Gonten, Appenzell</p>
   </footer>
 
   <!-- Vercel Web Analytics -->
